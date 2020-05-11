@@ -1,0 +1,933 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input,
+button,
+select,
+textarea,
+a,
+img {
+  outline: none;
+}
+
+/*去掉超链接或按钮点击时出现的虚线框黄色边框*/
+::-moz-focus-inner {
+  border: 0;
+}
+
+/*火狐的私有属性去掉点击时边框*/
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+blockquote {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+i {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+mark {
+  background: none;
+}
+
+input::-ms-clear {
+  display: none !important;
+}
+
+input,
+textarea {
+  border: 0;
+  font-family: "Microsoft YaHei";
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 清除浮动 */
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: '';
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+ul li {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+  color: #999999;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+  border: none;
+}
+
+html {
+  /* font-size: calc(100vw / 320 * 16); */
+  font-size: calc(100vw / 375 * 12);
+  margin: 0 auto;
+  color: #626263;
+  min-width: 320px;
+  /* max-width: 800px; */
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.shop-bold-font {
+  font: bold;
+}
+
+/* 阴影部分兼容 向右 向下的阴影*/
+.border-shadow {
+  box-shadow: 0.1rem 0.1rem 0.2rem #999999;
+  -moz-box-shadow: 0.1rem 0.1rem 0.2rem #999999;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.2rem #999999;
+}
+
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
+
+.button {
+  width: 100%;
+}
+
+/* 弹出框（确定？取消？） */
+.el-message-box__wrapper .el-message-box {
+  width: 24rem;
+}
+
+/* 提示消息 */
+.el-message {
+  width: 90%;
+  min-width: initial;
+  opacity: 0.8;
+  background-color: #000;
+  border: initial;
+  top: 39%;
+  padding: 1.5rem 0;
+  transition: initial;
+  max-width: 800px;
+}
+
+.el-message .el-message__content {
+  padding: 0 4%;
+  line-height: 1.75rem;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.el-message__closeBtn {
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  display: block;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+  transform: initial;
+}
+
+.el-message.is-closable .el-message__content {
+  padding: 0 4%;
+  line-height: 1.75rem;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.el-message-fade-enter,
+.el-message-fade-leave-active {
+  opacity: initial;
+  transform: initial;
+}
+
+.el-message-fade-enter-active,
+.el-message-fade-enter-to {
+  opacity: initial;
+  transform: initial;
+}
+
+.el-input__inner {
+  height: 2.5rem;
+  line-height: initial;
+  margin: 0;
+}
+
+.el-form-item__content .line {
+  text-align: center;
+}
+
+.el-button {
+  color: #ffffff;
+  border: initial;
+  background-color: #1BD67B;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+}
+
+.el-radio__label {
+  font-size: 1.25rem;
+  padding-left: 0.5rem;
+}
+
+.el-button:focus,
+.el-button:active,
+.el-button:hover {
+  color: #ffffff;
+  background-color: #1BD67B;
+}
+
+.el-input__inner:focus {
+  border-color: #dcdfe6;
+}
+
+.el-message-box__message p {
+  color: #4E4E4E;
+  font-size: 13px;
+}
+
+.el-message-box__btns button:first-child {
+  background-color: #ffffff;
+  color: #4E4E4E;
+  border: 1px solid #e5e5e5;
+}
+
+.el-message-box__header {
+  padding: 0 !important;
+  padding-top: 30px !important;
+}
+
+.el-message-box__title {
+  font-size: 13px;
+  color: #333333;
+}
+
+.el-message-box__content {
+  color: #333333;
+  font-size: 12px !important;
+  padding: 19px 15px 25px 15px !important
+}
+
+.el-message-box__btns button:nth-child(2) {
+  margin-left: 20%;
+}
+
+.el-message-box__btns {
+  padding: 0 !important;
+}
+
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: #1bd67b;
+}
+
+.ruleForm .issueType .el-form-item__label {
+  float: none;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+  margin-top: 1rem;
+}
+
+.ruleForm .el-form-item {
+  margin-bottom: 0rem;
+}
+
+.ruleForm .issueType .el-form-item__content .el-radio-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+}
+
+.ruleForm .issueType .el-form-item__content .el-radio {
+  color: #fff;
+  margin: 12px 15px;
+}
+
+.ruleForm .issueType .el-form-item__content .el-form-item__error,
+.ruleForm .suggestion .el-form-item__content .el-form-item__error,
+.ruleForm .contact-way .el-form-item__content .el-form-item__error {
+  left: 1rem;
+  color: #ff9800;
+  font-size: 1.25rem;
+}
+
+.ruleForm .issueType .el-form-item__content .el-radio__inner {
+  border: 1px solid #fff;
+  background: transparent;
+}
+
+.ruleForm .issueType .el-form-item__content .el-radio__inner::after {
+  background-color: rgb(255, 170, 0);
+  width: 6px;
+  height: 6px;
+}
+
+.ruleForm .issueType .el-form-item__content .el-radio__input.is-checked+.el-radio__label {
+  color: #fff;
+}
+
+.ruleForm .issueType .el-radio__input.is-checked .el-radio__inner {
+  background-color: transparent;
+  border: 1px solid rgb(255, 170, 0);
+}
+
+.ruleForm .suggestion .el-form-item__label {
+  float: none;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+}
+
+.ruleForm .suggestion .el-form-item__content .el-textarea__inner {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  padding-bottom: 80px;
+  padding: 5px 8px;
+}
+
+.ruleForm .suggestion .el-form-item__content .el-textarea {
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  position: relative;
+}
+
+.ruleForm .contact-way label {
+  float: none;
+  width: calc(100% - 2rem);
+  display: block;
+  text-align: left;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  /* padding: 0rem 1rem; */
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.ruleForm .contact-way label span {
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+.ruleForm .contact-way .el-input__inner {
+  height: 3.75rem;
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 0;
+  color: #fff;
+}
+
+.reward-ruleForm .el-input__inner {
+  height: 3.25rem;
+  border: none;
+  background: #282830;
+  border-radius: 0;
+  color: #fff;
+}
+
+
+.tv-reward-ruleForm .el-input__inner {
+  border: none;
+  background: #615b5b;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, .2);
+  font-size: 1.4rem;
+}
+
+.tv-reward-ruleForm .el-form-item__error {
+  font-size: 1.25rem;
+  padding-top: 0.5rem;
+  position: relative;
+}
+
+.invite-code-input-div .el-form-item__error {
+  font-size: 1.25rem;
+  padding-top: 0.5rem;
+  position: relative;
+}
+
+.ruleForm .contact-way .el-input {
+  width: calc(100% - 2rem);
+  background: transparent;
+  margin-left: 1rem;
+}
+
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-input__inner:focus,
+.el-form-item.is-error .el-textarea__inner,
+.el-form-item.is-error .el-textarea__inner:focus,
+.el-message-box__input input.invalid,
+.el-message-box__input input.invalid:focus,
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: #ccc;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  zoom: 1;
+}
+
+*:first-child+html .clearfix {
+  zoom: 1;
+}
+
+/*上传图片通用样式*/
+.upload-wrap {
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  min-height: 93px;
+  max-height: 186px;
+  line-height: initial;
+  margin-top: 2.5rem;
+}
+
+.upload-ul {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0px 8px;
+}
+
+.upload-ul li {
+  position: relative;
+  float: left;
+  width: 83px;
+  height: 83px;
+  margin: 0 10px 10px 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.upload-pick {
+  background: url(../assets/images/upload.png) no-repeat center center;
+  background-size: 99%;
+}
+
+.webuploader-pick {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+}
+
+.webuploader-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.webuploader-container label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.webuploader-element-invisible {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.viewThumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: .3rem;
+}
+
+.viewThumb img {
+  width: 100%;
+  height: 100%
+}
+
+.diyBar {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/images/bgblack.png);
+  z-index: 3;
+}
+
+.diyProgress {
+  position: absolute;
+  left: 0;
+  top: 33px;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  text-align: center;
+  color: #FFF;
+  background: rgba(10, 168, 241, .7);
+  z-index: 3;
+}
+
+.diyControl {
+  position: absolute;
+  display: block;
+  right: -8px;
+  top: -8px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  z-index: 3;
+}
+
+.viewThumb:hover .diyControl {
+  display: block;
+}
+
+.diyControl span i {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.diyControl span i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.diyLeft {
+  margin-left: 3px;
+}
+
+.diyLeft {
+  margin-right: 3px;
+}
+
+.diyLeft i {
+  margin-left: 3px;
+  background: url(../assets/images/upload-icon1.png) no-repeat 0 0;
+}
+
+.diyCancel i {
+  background: url(../assets/images/close.png) no-repeat center center;
+  background-size: 100%;
+}
+
+.diyRight i {
+  margin-right: 3px;
+  background: url(../assets/images/upload-icon1.png) no-repeat 0 -22px;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 10px 50px;
+  font: 16px/20px 'Microsoft YaHei';
+  background: rgba(10, 168, 241, .7);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.upload-btn:hover {
+  background: rgba(10, 168, 241, 1)
+}
+
+.input-username .el-input__inner {
+  height: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .2), 0 0 0.5rem rgba(0, 0, 0, .1), 0 0px 0 #000;
+  }
+
+  100% {
+    box-shadow: 0 0 1.5rem rgba(10, 10, 10, .6), 0 0 0.75rem rgba(10, 10, 10, .4), 0 0px 0 #111;
+  }
+}
+
+@-moz-keyframes glow {
+  0% {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .2), 0 0 0.5rem rgba(0, 0, 0, .1), 0 0px 0 #000;
+  }
+
+  100% {
+    box-shadow: 0 0 1.5rem rgba(10, 10, 10, .6), 0 0 0.75rem rgba(10, 10, 10, .4), 0 0px 0 #111;
+  }
+}
+
+@-ms-keyframes glow {
+  0% {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .2), 0 0 0.5rem rgba(0, 0, 0, .1), 0 0px 0 #000;
+  }
+
+  100% {
+    box-shadow: 0 0 1.5rem rgba(10, 10, 10, .6), 0 0 0.75rem rgba(10, 10, 10, .4), 0 0px 0 #111;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, .2), 0 0 0.5rem rgba(0, 0, 0, .1), 0 0px 0 #000;
+  }
+
+  100% {
+    box-shadow: 0 0 1.5rem rgba(10, 10, 10, .6), 0 0 0.75rem rgba(10, 10, 10, .4), 0 0px 0 #111;
+  }
+}
+
+/* 经过大型项目实践，下面这段CSS是最好的基于rem和vw和calc实践代码： */
+/* html {
+  font-size: 16px;
+} */
+
+/* iPhone6的375px尺寸作为16px基准，414px正好18px大小, 600 20px */
+/* @media screen and (min-width: 375px) {
+  html {
+    font-size: calc(100% + 2 * (100vw - 375px) / 39);
+  }
+} */
+
+/* 414px-1000px每100像素宽字体增加1px(18px-22px) */
+/* @media screen and (min-width: 414px) {
+  html {
+    font-size: calc(112.5% + 4 * (100vw - 414px) / 586);
+  }
+} */
+
+/* 600px-1000px每100像素宽字体增加1px(20px-24px) */
+/* @media screen and (min-width: 600px) {
+  html {
+    font-size: calc(125% + 4 * (100vw - 600px) / 400);
+  }
+} */
+
+/* 1000px往后是每100像素0.5px增加 */
+/* @media screen and (min-width: 1000px) {
+  html {
+    font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);
+  }
+} */
+
+@media (min-width: 320px) {
+  html {
+    font-size: 65.625%;
+  }
+}
+
+@media (min-width: 360px) {
+  html {
+    font-size: 68.75%;
+  }
+}
+
+@media (min-width: 375px) {
+  html {
+    font-size: 71.875%;
+  }
+}
+
+@media (min-width: 384px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 414px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 540px) {
+  html {
+    font-size: 84.375%;
+  }
+
+  .pay-section .el-checkbox__inner:after {
+    height: 11px;
+    left: 7px;
+    width: 5px;
+    top: 2px;
+  }
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 81.25%;
+  }
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media (min-width: 720px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 110%;
+  }
+
+  .el-message {
+    padding: 0.2rem 0;
+  }
+}
+
+
+/* ********************* ScanPayCoreWeb 合并css ************************** */
+
+.scanpaycore-page {
+  font-size: 1.2rem;
+  margin: 0 auto;
+  color: #626263;
+  max-width: 800px;
+}
+
+.padding-lr3 {
+  padding: 0 3%;
+}
+
+.input-inviteCode .el-input__inner {
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+
+.scanpaycore-page .el-input__inner {
+  height: 3rem;
+  line-height: initial;
+  margin: 0.8rem 0;
+}
+
+.scanpaycore-page .el-form-item__error {
+  font-size: 1.25rem;
+}
+
+.scanpaycore-page .el-button {
+  color: #ffffff;
+  border: initial;
+  background-color: #1BD67B;
+  padding: 0.83rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+.orderRuleForm .el-input__inner:focus,
+.orderRuleForm .el-textarea__inner:focus {
+  border-color: #2b88be;
+}
+
+.code-area .el-form-item__content {
+  display: flex;
+}
+
+.el-loading-spinner {
+  top: 0;
+  margin-top: 0;
+}
+
+.el-checkbox__label {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  font-weight: initial;
+}
+
+.el-checkbox__inner {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.el-loading-mask {
+  z-index: 2;
+}
+
+.el-icon-my-checking {
+  background: url('../assets/images/checking.png') center no-repeat;
+  background-size: cover;
+}
+
+.el-icon-my-checking:before {
+  content: "\66ff";
+  font-size: 4rem;
+  visibility: hidden;
+}
+
+.orderRuleForm .payWay {
+  margin: 0;
+}
+
+.orderRuleForm .payWay .el-form-item__content {
+  line-height: initial;
+}
+
+.orderRuleForm .el-form-item .el-form-item__label {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+}
+
+.orderRuleForm .el-form-item.is-error .el-input__inner,
+.orderRuleForm .el-form-item.is-error .el-input__inner:focus,
+.orderRuleForm .el-form-item.is-error .el-textarea__inner,
+.orderRuleForm .el-form-item.is-error .el-textarea__inner:focus,
+.orderRuleForm .el-message-box__input input.invalid,
+.orderRuleForm .el-message-box__input input.invalid:focus {
+  border-color: #f56c6c;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title></title>
+  <link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico">
+  <style>
+    .skeleton {
+      position: fixed;
+      height: 100%;
+      overflow: hidden;
+      padding: 15px;
+      box-sizing: border-box;
+      background: #fff;
+      width: 98%;
+      top: 0;
+    }
+
+    .skeleton-nav {
+      height: 110px;
+      background: #eee;
+      margin-bottom: 15px;
+    }
+
+    .skeleton-swiper {
+      height: 440px;
+      background: #eee;
+      margin-bottom: 15px;
+    }
+
+    .skeleton-tabs {
+      list-style: none;
+      padding: 0;
+      margin: 0 -15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .skeleton-tabs-item {
+      width: 22%;
+      height: 80px;
+      box-sizing: border-box;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .skeleton-tabs-item span {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border-radius: 55px;
+      background: #eee;
+    }
+
+    .skeleton-banner {
+      height: 250px;
+      background: #eee;
+      margin-bottom: 15px;
+    }
+
+    .skeleton-productions {
+      height: 50px;
+      margin-bottom: 15px;
+      background: #eee;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div id="app">
+    <div data-server-rendered=true class="skeleton page">
+      <div class=skeleton-nav></div>
+      <div class=skeleton-swiper></div>
+      <ul class=skeleton-tabs>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+      </ul>
+      <div class=skeleton-banner></div>
+      <div class=skeleton-productions></div>
+      <div class=skeleton-productions></div>
+      <div class=skeleton-productions></div>
+      <div class=skeleton-productions></div>
+      <ul class=skeleton-tabs>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+        <li class=skeleton-tabs-item><span></span></li>
+      </ul>
+      <div class=skeleton-swiper></div>
+      <div class=skeleton-nav></div>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/webuploader/0.1.1/webuploader.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.19.2/axios.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue-router/3.0.6/vue-router.min.js"></script>
+  <script src="https://cdn.bootcss.com/element-ui/2.7.2/index.js"></script>
+  <script src="https://cdn.bootcss.com/vuex/3.1.3/vuex.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue-i18n/8.15.5/vue-i18n.min.js"></script>
+  <script src="https://cdn.bootcss.com/lodash.js/4.17.15/lodash.min.js"></script>
+  <script src="https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js"></script>
+
+  <script async src="./static/utils/findFocus.js"></script>
+  <!-- <script src="./static/utils/paypal-checkout.min.js"></script> -->
+  <script src="./static/setting.js"></script>
+
+  <!--这里是集成友盟的U-Web代码，这里只需更换数字那一串就可以，其他不用更改，例如凡是有相同一下数字的都需要改： 1276361625（这个id从友盟添加站点后友盟给你的一个id）-->
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1276361625'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol +
+      "s5.cnzz.com/z_stat.php%3Fid%3D1276361625' type='text/javascript'%3E%3C/script%3E"));
+    document.getElementById("cnzz_stat_icon_1276361625").style.display = "none"; //这里是将 页面上显示  “站长统计”四个字隐藏掉
+
+  </script>
+  <script>
+    //声明_czc对象:
+    var _czc = _czc || [];
+    //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+    _czc.push(["_setAccount", "1276361625"]);
+
+  </script>
+
+  <!-- 防止CDN挂掉 -->
+  <script type="text/javascript">
+    if (typeof $ == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/jquery.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof Vue == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/vue.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof axios == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/axios.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof Vuex == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/vuex.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof VueRouter == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/vue-router.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof moment == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/moment.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof lodash == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/lodash.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof VueI18n == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/vue-i18n.min.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof ELEMENT == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/element-ui.js'%3E%3C/script%3E"));
+    }
+
+    if (typeof WebUploader == 'undefined') {
+      document.write(unescape("%3Cscript src='/static/js/webuploader.min.js'%3E%3C/script%3E"));
+    }
+
+  </script>
+
+</html>
